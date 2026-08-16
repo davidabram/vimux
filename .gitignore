@@ -1,0 +1,11 @@
+# Rust build artifacts
+target/
+
+# Nix build output
+result
+result-*
+
+# Local development
+.direnv/
+.envrc.local
+.DS_Store
