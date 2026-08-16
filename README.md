@@ -12,9 +12,9 @@ nix develop
 direnv allow
 ```
 
-Build and run the binary with Cargo or Nix:
+Build and inspect the accessibility tree with Cargo or Nix:
 
 ```bash
-cargo run
-nix run
+cargo run -- inspect
+nix run -- inspect
 ```

@@ -3,5 +3,9 @@ name = "vimux"
 version = "0.1.0"
 edition = "2021"
 
+[dependencies]
+atspi = { version = "0.30", default-features = false, features = ["connection", "proxies", "tokio"] }
+tokio = { version = "1.38", features = ["macros", "rt-multi-thread"] }
+
 [profile.release]
 strip = true
