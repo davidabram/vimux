@@ -18,3 +18,9 @@ Build and inspect the accessibility tree with Cargo or Nix:
 cargo run -- inspect
 nix run -- inspect
 ```
+
+Under a niri session, test selective F12 keyboard interception with:
+
+```bash
+cargo run -- keyboard-test
+```

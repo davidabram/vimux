@@ -5,7 +5,9 @@ edition = "2021"
 
 [dependencies]
 atspi = { version = "0.30", default-features = false, features = ["connection", "proxies", "tokio"] }
-tokio = { version = "1.38", features = ["macros", "rt-multi-thread"] }
+futures-util = { version = "0.3.33", default-features = false, features = ["std"] }
+tokio = { version = "1.38", features = ["macros", "rt-multi-thread", "signal"] }
+zbus = { version = "5.19", default-features = false, features = ["tokio"] }
 
 [profile.release]
 strip = true

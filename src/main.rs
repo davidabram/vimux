@@ -1,4 +1,5 @@
 mod accessibility;
+mod keyboard;
 
 use std::env;
 
@@ -14,8 +15,14 @@ async fn main() {
                 std::process::exit(1);
             }
         }
+        Some("keyboard-test") => {
+            if let Err(error) = keyboard::test().await {
+                eprintln!("keyboard-test: {error}");
+                std::process::exit(1);
+            }
+        }
         _ => {
-            eprintln!("usage: vimux inspect");
+            eprintln!("usage: vimux <inspect|keyboard-test>");
             std::process::exit(2);
         }
     }
